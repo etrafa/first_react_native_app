@@ -1,4 +1,5 @@
 import { ScrollView, StyleSheet } from "react-native";
+import Footer from "./src/components/Footer";
 import ChapterEight from "./src/pages/Chapters/ChapterEight";
 import ChapterFive from "./src/pages/Chapters/ChapterFive";
 import ChapterFour from "./src/pages/Chapters/ChapterFour";
@@ -12,18 +13,21 @@ import ChapterTwo from "./src/pages/Chapters/ChapterTwo";
 
 export default function App() {
   return (
-    <ScrollView style={styles.container}>
-      <ChapterOne />
-      <ChapterTwo />
-      <ChapterThree />
-      <ChapterFour />
-      <ChapterFive />
-      <ChapterSix />
-      <ChapterSeven />
-      <ChapterEight />
-      <ChapterNine />
-      <ChapterTen />
-    </ScrollView>
+    <>
+      <ScrollView style={styles.container}>
+        <ChapterOne />
+        <ChapterTwo />
+        <ChapterThree />
+        <ChapterFour />
+        <ChapterFive />
+        <ChapterSix />
+        <ChapterSeven />
+        <ChapterEight />
+        <ChapterNine />
+        <ChapterTen />
+      </ScrollView>
+      <Footer />
+    </>
   );
 }
 
