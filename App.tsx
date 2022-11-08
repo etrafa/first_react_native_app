@@ -3,12 +3,13 @@ import { StyleSheet, Text, View } from "react-native";
 import AudioTest from "./src/components/AudioTest";
 import FillTheBlanks from "./src/components/FillTheBlanks";
 import MatchCards from "./src/components/MatchCards";
-import MultipleChoice from "./src/components/MultipleChoiceWithPicture";
+import MultipleChoiceWithPicture from "./src/components/MultipleChoiceWithPicture";
+import MultipleChoice from "./src/components/MultipleChoice";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <FillTheBlanks />
+      <MultipleChoice />
     </View>
   );
 }
