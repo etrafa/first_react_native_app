@@ -1,16 +1,29 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import AudioTest from "./src/components/AudioTest";
-import FillTheBlanks from "./src/components/FillTheBlanks";
-import MatchCards from "./src/components/MatchCards";
-import MultipleChoiceWithPicture from "./src/components/MultipleChoiceWithPicture";
-import MultipleChoice from "./src/components/MultipleChoice";
+import { ScrollView, StyleSheet } from "react-native";
+import ChapterEight from "./src/pages/Chapters/ChapterEight";
+import ChapterFive from "./src/pages/Chapters/ChapterFive";
+import ChapterFour from "./src/pages/Chapters/ChapterFour";
+import ChapterNine from "./src/pages/Chapters/ChapterNine";
+import ChapterOne from "./src/pages/Chapters/ChapterOne";
+import ChapterSeven from "./src/pages/Chapters/ChapterSeven";
+import ChapterSix from "./src/pages/Chapters/ChapterSix";
+import ChapterTen from "./src/pages/Chapters/ChapterTen";
+import ChapterThree from "./src/pages/Chapters/ChapterThree";
+import ChapterTwo from "./src/pages/Chapters/ChapterTwo";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <MultipleChoice />
-    </View>
+    <ScrollView style={styles.container}>
+      <ChapterOne />
+      <ChapterTwo />
+      <ChapterThree />
+      <ChapterFour />
+      <ChapterFive />
+      <ChapterSix />
+      <ChapterSeven />
+      <ChapterEight />
+      <ChapterNine />
+      <ChapterTen />
+    </ScrollView>
   );
 }
 
