@@ -1,19 +1,25 @@
-import { View, Text, Image, StyleSheet } from "react-native";
-
+import { useNavigation } from "@react-navigation/core";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 interface LessonCartProps {
   lessonName: string;
   lessonImage: any;
+  path: string;
 }
 
-const LessonCart = ({ lessonName, lessonImage }: LessonCartProps) => {
+const LessonCart = ({ lessonName, lessonImage, path }: LessonCartProps) => {
+  const navigation = useNavigation();
+
   return (
-    <View style={styles.body}>
+    <TouchableOpacity
+      onPress={() => navigation.navigate(path)}
+      style={styles.body}
+    >
       <View style={styles.leftContainer}>
         <Image style={styles.lessonImage} source={lessonImage} />
         <View style={styles.divider}></View>
       </View>
       <Text style={styles.lessonName}>{lessonName}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -30,7 +36,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 10,
     borderColor: "#EAEAEA",
-    shadowOpacity: 0.12,
   },
 
   leftContainer: {

@@ -14,6 +14,7 @@ const ChapterFive = () => {
             key={chapter.lessonName}
             lessonName={chapter.lessonName}
             lessonImage={chapter.src}
+            path={chapter.path}
           />
         ))}
     </View>
